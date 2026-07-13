@@ -1,0 +1,9 @@
+{
+    "recommendations": [
+        "charliermarsh.ruff",
+        "ms-python.python",
+        "ms-toolsai.jupyter",
+        "reditorsupport.r",
+        "rdebugger.r-debugger"
+    ]
+}
