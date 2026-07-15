@@ -4,6 +4,7 @@
         "ms-python.python",
         "ms-toolsai.jupyter",
         "reditorsupport.r",
-        "rdebugger.r-debugger"
+        "rdebugger.r-debugger",
+        "posit.air-vscode"
     ]
 }

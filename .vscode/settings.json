@@ -1,27 +1,29 @@
 {
     "python.defaultInterpreterPath": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+    "python.terminal.activateEnvironment": false,
     "r.rterm.windows": "${workspaceFolder}\\.venv\\Scripts\\radian.exe",
-    "r.rpath.windows": "C:\\Program Files\\R\\R-4.X.X\\bin\\x64\\R.exe",
+    "r.rpath.windows": "C:\\Program Files\\R\\R-4.5.2\\bin\\x64\\R.exe",
     "r.bracketedPaste": true,
     "r.plot.useHttpgd": true,
 
     // --- Auto formatting ---
     "editor.formatOnSave": true,
-    "editor.codeActionsOnSave": {
-        "source.fixAll": "explicit",
-        "source.organizeImports": "explicit"
-    },
 
     // --- Python Configurations (Managed via Ruff) ---
     "[python]": {
         "editor.defaultFormatter": "charliermarsh.ruff",
         "editor.formatOnSave": true
     },
-    // Enables the native Rust-powered fast engine inside VS Code
     "ruff.nativeServer": "on", 
-
-    // Enforces lintr warnings and code diagnostics inline
-    "r.lsp.diagnostics": true,
-    // Tells the language server to use the 'styler' package for formatting
-    "r.format.enable": true
+    // R configurations (Managed via Air)
+    "[r]": {
+        "editor.defaultFormatter": "Posit.air-vscode",
+        "editor.tabSize": 2,
+        "editor.formatOnSave": true,
+        "editor.insertSpaces": true
+    },
+    "[quarto]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "quarto.quarto"
+    }
 }

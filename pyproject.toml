@@ -8,10 +8,15 @@ authors = [
 ]
 requires-python = ">=3.12"
 dependencies = [
+    "httpx[http2]>=0.28.1",
+    "loguru>=0.7.3",
+    "obspec>=0.1.0",
+    "obstore>=0.11.0",
     "plotly[express]>=6.8.0",
     "plotnine>=0.15.7",
     "polars>=1.42.1",
     "pyarrow>=25.0.0",
+    "pydantic>=2.13.4",
     "radian>=0.6.16",
     "rpy2>=3.6.7",
     "rpy2-arrow>=0.1.3",

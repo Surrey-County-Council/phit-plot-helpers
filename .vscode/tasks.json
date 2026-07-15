@@ -1,0 +1,50 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Project: Sync All Environments",
+            "type": "shell",
+            "command": "powershell",
+            "args": [
+                "-Command",
+                "uv sync; uv run R.exe -e 'renv::restore()'"
+            ],
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Project: Snapshot R Environment",
+            "type": "shell",
+            "command": "powershell",
+            "args": [
+                "-Command",
+                "uv run R.exe -e 'renv::snapshot(prompt = FALSE)'"
+            ],
+            "group": "none",
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Project: Run Current R Script Background",
+            "type": "shell",
+            "command": "powershell",
+            "args": [
+                "-Command",
+                "uv run Rscript.exe '${file}'"
+            ],
+            "group": "test",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": []
+        }
+    ]
+}
